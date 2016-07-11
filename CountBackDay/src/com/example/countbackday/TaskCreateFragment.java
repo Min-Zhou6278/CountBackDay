@@ -96,25 +96,16 @@ public class TaskCreateFragment extends DialogFragment implements OnClickListene
 		Task t = new Task();
 		if (!TextUtils.isEmpty(mEtName.getText())) {
 			t.setName(mEtName.getText().toString());
-		} else {
-			Toast.makeText(getActivity(), "标题未填写", Toast.LENGTH_SHORT).show();
-			return;
-		}
+		} 
 		String[] categories = getResources().getStringArray(R.array.task_categories);
 		if (categories.length > mSpCategory.getSelectedItemPosition()) {
 			t.setCategory(categories[mSpCategory.getSelectedItemPosition()]);
-		} else {
-			Toast.makeText(getActivity(), "未选择分类", Toast.LENGTH_SHORT).show();
-			return;
-		}
+		} 
 		t.setRepeatMode(mSpRepeat.getSelectedItemPosition()+1);
 		if (mDate != null) {
-            t.setDate(false, mDate.getYear(), mDate.getMonth(), mDate.getDay());
+                        t.setDate(false, mDate.getYear(), mDate.getMonth(), mDate.getDay());
 		    //t.setDate(mDate);
-		} else {
-			Toast.makeText(getActivity(), "请选择日期", Toast.LENGTH_SHORT).show();
-			return;
-		}
+		} 
 		t.setId("tid_"+SystemClock.currentThreadTimeMillis());
 		TaskBiz.saveTask(getActivity(), t);
 		this.dismiss();
