@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">倒数日</string>
+        <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="repeat_modes">
+        <item>不重复</item>
+        <item>每周一次</item>
+        <item>每月一次</item>
+        <item>每年一次</item>
+    </string-array>
+    <string-array name="task_categories">
+        <item>生活</item>
+        <item>工作</item>
+        <item>纪念日</item>
+    </string-array>
+</resources>
