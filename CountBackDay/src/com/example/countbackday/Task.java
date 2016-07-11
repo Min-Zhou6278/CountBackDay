@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Task implements Serializable {
 
-	private static final long serialVersionUID = -5069322474339614577L;
+	private static final long serialVersionUID = 0;
 
 	public static final int REPEAT_NONE = 0;
 	public static final int REPEAT_ONE_WEEK = 1;
